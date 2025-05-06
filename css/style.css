@@ -1,0 +1,727 @@
+/* ===== Tipografía y Reset ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* ===== Encabezado Superior ===== */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.top-bar .left,
+.top-bar .right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.top-bar .icon {
+  color: #041c40;
+}
+
+/* ===== Navegación Principal ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #041c40;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo img {
+  height: 110px;
+  max-height: 140px;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: #58b947;
+}
+
+/* ===== Hero Section with Video ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 1rem;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-content h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.hero-content .btn-reserva {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background-color: #041c40;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-content .btn-reserva:hover {
+  background-color: #58b947;
+  border-color: #58b947;
+}
+
+.hero-content .btn-reserva i {
+  margin-left: 8px;
+}
+
+/* ===== Sección Misión estilizada con efecto ===== */
+.mision {
+  background: #f4f4f4;
+  padding: 5rem 2rem;
+  position: relative;
+  z-index: 1;
+  text-align: justify;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mision:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  background-color: #eafafa;
+}
+
+.mision h2 {
+  color: #041c40;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-weight: 700;
+}
+
+.mision p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  font-style: italic;
+}
+
+.corte-inclinado {
+  height: 80px;
+  width: 100%;
+  background-color: #041c40;
+  clip-path: polygon(0 100%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.socios {
+  background: #041c40;
+  color: #fff;
+  padding: 5rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.socios h2 {
+  color: #fff;
+}
+
+/* ===== Sección Servicios en formato grid de 6 bloques ===== */
+.servicios {
+  padding: 5rem 2rem;
+  background-color: #fff;
+  text-align: center;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.servicios h2 {
+  font-size: 2.5rem;
+  color: #041c40;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.servicios h2::before,
+.servicios h2::after {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 3px;
+  background: #10b2bce6;
+  margin: 0 1rem;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+.servicios p.subtexto {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.item-servicio {
+  background: #f4f4f4;
+  border-radius: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.item-servicio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 0;
+}
+
+.item-servicio:hover img {
+  transform: scale(1.05);
+}
+
+.item-servicio.texto {
+  background-color: #10b2bce6;
+  color: #fff;
+  padding: 1.5rem;
+  text-align: left;
+  justify-content: center;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-servicio.texto h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.item-servicio.texto p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.item-servicio.texto a {
+  align-self: start;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: #10b2bce6;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.item-servicio.texto a:hover {
+  background-color: #041c40;
+  color: #fff;
+}
+
+
+
+
+/* ===== Nueva Sección Transporte Marítimo con Slider ===== */
+.transporte-marino {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: linear-gradient(to right, #041c40 50%, #062e60 50%);
+  color: white;
+  padding: 1rem 0; /* Reducido padding vertical */
+  align-items: stretch;
+}
+
+.transporte-contenido {
+  padding: 2rem 2rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.transporte-contenido h2 {
+  font-size: 2rem;
+  color: #10b2bce6;
+  margin-bottom: 1rem;
+}
+
+.transporte-contenido hr {
+  border: 0;
+  height: 2px;
+  background: #10b2bce6;
+  margin-bottom: 1rem;
+  width: 80px;
+}
+
+.transporte-contenido p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.transporte-contenido .btn-transporte {
+  background-color: #10b2bce6;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  width: fit-content;
+}
+
+.transporte-contenido .btn-transporte:hover {
+  background-color: #0e94a4;
+}
+
+.slider-marino {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.slider-marino .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider-marino .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-marino .slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* ===== Responsive para Transporte Marítimo ===== */
+@media (max-width: 768px) {
+  .transporte-marino {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .transporte-contenido {
+    padding: 2rem;
+  }
+
+  .slider-marino {
+    height: 250px;
+  }
+}
+
+/* ===== FIN Sección Transporte Marítimo con Slider ===== */
+
+
+
+
+
+
+
+
+
+
+/* ===== Sección Slider de Lanchas ===== */
+.slider-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #041c40;
+  color: white;
+  padding: 3rem 2rem;
+  align-items: center;
+}
+
+.slider-contenido {
+  flex: 1 1 400px;
+  padding: 2rem;
+}
+
+.slider-contenido h2 {
+  font-size: 2rem;
+  color: #10b2bce6;
+  margin-bottom: 1rem;
+}
+
+.slider-contenido p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.btn-transporte {
+  background-color: #10b2bce6;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn-transporte:hover {
+  background-color: #0e94a4;
+}
+
+.slider-galeria {
+  flex: 1 1 500px;
+  overflow: hidden;
+  max-width: 500px;
+  height: 300px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide.activo {
+  opacity: 1;
+  position: relative;
+}
+
+/* ===== Responsive ajustes ===== */
+@media (max-width: 992px) {
+  .grid-servicios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-servicios {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background: #041c40;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .categorias {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+/* ===== Sección Tours en Cartagena ===== */
+.tours-cartagena {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.tours-cartagena h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+  color: #041c40;
+}
+
+.tours-cartagena p.subtitulo {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.grid-tours {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tour-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-5px);
+}
+
+.tour-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.tour-card .tour-info {
+  padding: 1rem;
+  text-align: left;
+}
+
+.tour-card h3 {
+  font-size: 1.2rem;
+  color: #041c40;
+  margin-bottom: 0.5rem;
+}
+
+.tour-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.tour-card .btn-tour {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #10b2bce6;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.tour-card .btn-tour:hover {
+  background-color: #0e94a4;
+}
+
+/* ===== Responsive Tours Cartagena ===== */
+@media (max-width: 1024px) {
+  .grid-tours {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-tours {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== FIN Sección Tours en Cartagena ===== */
+
+
+/* ===== Sección Testimonios con Slider Mejorado para 3, 2, 1 tarjetas ===== */
+.testimonios {
+  background: linear-gradient(rgba(4, 28, 64, 0.9), rgba(6, 46, 96, 0.9)), url('../img/fondo-testimonios.jpg') no-repeat center center/cover;
+  padding: 5rem 2rem;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonios h2 {
+  font-size: 2.2rem;
+  color: #10b2bce6;
+  margin-bottom: 2rem;
+}
+
+.slider-testimonios {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+
+.testimonio {
+  background: white;
+  color: #041c40;
+  flex: 0 0 calc(33.333% - 1.3rem); /* 3 por fila en escritorio */
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+}
+
+.testimonio img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #10b2bce6;
+}
+
+.testimonio p {
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonio strong {
+  color: #041c40;
+}
+
+@media (max-width: 992px) {
+  .testimonio {
+    flex: 0 0 calc(50% - 1rem); /* 2 por fila en tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonio {
+    flex: 0 0 100%; /* 1 por fila en móviles */
+  }
+}
+
+/* ===== FIN Sección Testimonios en Tarjetas ===== */

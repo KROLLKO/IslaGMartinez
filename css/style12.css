@@ -1,0 +1,223 @@
+/* ===== Tipografía y Reset ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* ===== Encabezado Superior ===== */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background-color: #ffffff;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.top-bar .left,
+.top-bar .right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.top-bar .icon {
+  color: #041c40;
+}
+
+/* ===== Navegación Principal ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #041c40;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo img {
+  height: 110px;
+  max-height: 140px;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: #58b947;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: url('../img/hero.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-content h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.hero-content .btn-reserva {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background-color: #041c40;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-content .btn-reserva:hover {
+  background-color: #58b947;
+  border-color: #58b947;
+}
+
+.hero-content .btn-reserva i {
+  margin-left: 8px;
+}
+
+
+
+/*QUIENES SOMOS */
+.quienes-somos {
+  background: url('../img/fondo-quienes.png') no-repeat center top/cover;
+  padding: 8rem 2rem 4rem;
+  position: relative;
+  text-align: center;
+  color: #041c40;
+}
+
+.quienes-somos .contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.quienes-somos .texto {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.quienes-somos .imagen {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.quienes-somos .imagen img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ===== Responsive ajustes header y hero ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+  .top-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background: #041c40;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .quienes-somos .contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+}
